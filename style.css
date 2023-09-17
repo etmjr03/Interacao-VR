@@ -15,6 +15,32 @@ body {
     height: 100vh;
 }
 
+#app {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content max-content;
+    grid-template-areas: 
+    'aside header'
+    'aside main'
+    'aside footer';
+}
+
+aside {
+    grid-area: aside;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
 .side-menu {
     display: flex;
     padding: 12px;
@@ -145,4 +171,8 @@ iframe {
     fill: rgba(255, 255, 255, 0.60);
     height: 8px;
     width: 86px;
+}
+
+.nav-bar {
+    
 }
