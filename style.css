@@ -13,16 +13,16 @@ body {
     display: grid;
     place-content: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 #app {
     display: grid;
-    grid-template-columns: max-content max-content;
-    grid-template-rows: max-content max-content max-content;
     grid-template-areas: 
     'aside header'
     'aside main'
     'aside footer';
+    gap: 24px;
 }
 
 aside {
@@ -47,6 +47,8 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    height: fit-content;
+    align-self: center;
 
     border-radius: 80px;
     background: rgba(255, 255, 255, 0.10);
@@ -80,6 +82,8 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 24px;
+    width: fit-content;
+    justify-self: center;
 
     border-radius: 80px;
     background: rgba(255, 255, 255, 0.10);
@@ -95,19 +99,28 @@ footer {
     color: #FFFFFF;
 }
 
-.actions ion-icons {
+.actions ion-icon {
     display: flex;
     width: 24px;
     height: 24px;
     padding: 3px 2px;
     justify-content: center;
     align-items: center;
+    gap: 8px;
+    padding: 8px;
 
+    align-items: flex-start;
+    border-radius: 80px;
     color: #FFFFFF;
     opacity: 0.8;
 }
 
-.adress-bar {
+.actions ion-icon:hover {
+    background: rgba(255, 255, 255, 0.20);
+    opacity: 1;
+}
+
+.address-bar {
     display: flex;
     width: 440px;
     padding: 12px;
@@ -128,7 +141,7 @@ footer {
     line-height: 24px; /* 160% */
 }
 
-.adress-bar ion-icons {
+.address-bar ion-icon {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
@@ -136,13 +149,41 @@ footer {
     color: #FFFFFF;
 }
 
+.rocket {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.rocket ion-icon {
+    width: 16px;
+    height: 16px;
+
+    margin-top: -2px;
+}
+
 .screen {
     width: 960px;
     height: 540px;
 
     border-radius: 32px;
-    border: 1px solid rgba(255, 255, 255, 0.60);
+    border: 1px solid transparent;
     box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.screen::before {
+    content: "";
+    inset: 0;
+    background-image: linear-gradient(
+    to right, 
+    rgb(255 255 255 / 0.1), 
+    rgb(255 255 255 / 0.6));
+
+    border-radius: inherit;
+    margin: -1px;
+    z-index: -1;
+    position: absolute;
 }
 
 iframe {
@@ -156,6 +197,7 @@ iframe {
     align-items: center;
     display: flex;
     gap: 16px;
+    justify-self: center;
 }
 
 .interaction .ellipse {
@@ -164,15 +206,29 @@ iframe {
 
     backdrop-filter: blur(2px);
     fill: rgba(255, 255, 255, 0.60);
+
+    color: #FFFFFF;
+    opacity: 0.6;
 }
 
 .interaction .rectangle {
-    backdrop-filter: blur(2px);
-    fill: rgba(255, 255, 255, 0.60);
     height: 8px;
     width: 86px;
+    
+    backdrop-filter: blur(2px);
+    fill: rgba(255, 255, 255, 0.60);
+    
+    color: #FFFFFF;
+    opacity: 0.6;
 }
 
-.nav-bar {
-    
+#app {
+    animation: appear 400ms 500ms;
+}
+
+@keyframes appear {
+    from {
+        scale: 2;
+        opacity: 0;
+    }
 }

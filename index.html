@@ -12,12 +12,67 @@
 </head>
 <body>
     <div id="app">
-        <header>header</header>
-        <aside>aside</aside>
-        <main>
-            <iframe src="https://youtu.be/muAFXVFMUoA?si=MDHFmTHMaCtJNSI8" frameborder="0"></iframe>
+        <header class="nav-bar">
+            <div class="actions">
+                <ion-icon name="film-outline"></ion-icon>
+                <ion-icon name="chevron-back"></ion-icon>
+                <ion-icon name="chevron-forward"></ion-icon>
+            </div>
+            <div class="address-bar">
+                <div class="text">Aa</div>
+                <div class="rocket">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    www.google.com.br
+                </div>
+                <ion-icon name="refresh"></ion-icon>
+            </div>
+            <div class="actions">
+                <ion-icon name="share-outline"></ion-icon>
+                <ion-icon name="add-outline"></ion-icon>
+                <ion-icon name="copy-outline"></ion-icon>
+            </div>
+        </header>
+        <aside class="side-menu">
+            <ion-icon name="accessibility-outline"></ion-icon>
+            <ion-icon name="play-circle-outline"></ion-icon>
+            <ion-icon name="albums-outline"></ion-icon>
+            <ion-icon name="search-outline"></ion-icon>
+        </aside>
+        <main class="screen">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kcw9hxYb53Q?si=JkwS6IvxGT2Yuu2O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </main>
-        <footer>footer</footer>
+        <footer class="interaction">
+            <div class="ellipse">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                    <g filter="url(#filter0_b_505_90)">
+                      <circle cx="4" cy="4" r="4" fill="white" fill-opacity="0.6"/>
+                    </g>
+                    <defs>
+                      <filter id="filter0_b_505_90" x="-4" y="-4" width="16" height="16" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_505_90"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_505_90" result="shape"/>
+                      </filter>
+                    </defs>
+                </svg>
+            </div>
+            <div class="rectangle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="86" height="8" viewBox="0 0 86 8" fill="none">
+                    <g filter="url(#filter0_b_508_167)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4C0 1.79086 1.4809 0 3.30769 0H82.6923C84.5191 0 86 1.79086 86 4C86 6.20914 84.5191 8 82.6923 8H3.30769C1.4809 8 0 6.20914 0 4Z" fill="white" fill-opacity="0.6"/>
+                    </g>
+                    <defs>
+                      <filter id="filter0_b_508_167" x="-4" y="-4" width="94" height="16" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_508_167"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_508_167" result="shape"/>
+                      </filter>
+                    </defs>
+                </svg>
+            </div>
+        </footer>
     </div>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
