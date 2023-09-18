@@ -13,7 +13,7 @@ const videoId = 'qC0vDKVPCrw'
 function createAmbientLight() {
     if(!animationHasEnded) return
 
-    video = new YT.Player('ambient-light', {
+    ambientLight = new YT.Player('ambient-light', {
         videoId,
         events: {
             onReady: ambientLightReady,
